@@ -1,47 +1,350 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>replit</title>
-		<link href="style.css" rel="stylesheet" type="text/css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crayons For Change | Folsom, CA High School Student Organization</title>
 
-	<body>
-		<div class="littleback">
-			<div class="navbar">
-				<a href="#home">Home</a>
-				<a href="#about">About</a>
-				<a href="#services">Services</a>
-				<a href="#contact">Contact</a>
-			</div>
-		</div>
-		<div class="header">
-			<h1>Crayons For Change</h1>
-		</div>
-		<section id="who-we-are">
-			<h2>WHO WE ARE</h2>
-			<p>...</p>
-			<button>DISCOVER</button>
-		</section>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Crayons For Change is a youth-led nonprofit organization founded by Avyu and Mohammed, high school students from Folsom, California. We use art and creativity to make a difference in our community." />
+    <meta name="keywords" content="Crayons For Change, Folsom California, Avyu, Mohammed, high school students, youth organization, art nonprofit, Folsom CA, student-led, crayon donation, community outreach" />
+    <meta name="author" content="Avyu, Mohammed — Crayons For Change" />
+    <meta name="robots" content="index, follow" />
 
-		<section id="what-we-do">
-			<h2>WHAT WE DO</h2>
-			<p>...</p>
-			<button>EXPLORE</button>
-		</section>
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Crayons For Change | Folsom, CA" />
+    <meta property="og:description" content="Youth-led art organization founded by Avyu and Mohammed, high schoolers from Folsom, California. Making a difference one crayon at a time." />
+    <meta property="og:site_name" content="Crayons For Change" />
 
-		<section id="our-future">
-			<h2>OUR FUTURE</h2>
-			<p>...</p>
-			<button>FIND OUT MORE</button>
-		</section>
-		<div></div>
-	</body>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Crayons For Change | Folsom, CA" />
+    <meta name="twitter:description" content="High school students Avyu & Mohammed from Folsom, CA using art to change the world." />
+
+    <!-- Structured Data (Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Crayons For Change",
+      "description": "A youth-led organization founded by high school students Avyu and Mohammed in Folsom, California, dedicated to using art and creativity for community change.",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Folsom, California"
+      },
+      "member": [
+        {
+          "@type": "Person",
+          "name": "Avyu",
+          "jobTitle": "President and Co-Founder",
+          "affiliation": "Crayons For Change"
+        },
+        {
+          "@type": "Person",
+          "name": "Mohammed",
+          "jobTitle": "Vice President and Co-Founder",
+          "affiliation": "Crayons For Change"
+        }
+      ]
+    }
+    </script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-logo">🖍️ Crayons For Change</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#mission">Mission</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-bg"></div>
+      <div class="floating-crayons">
+        <span class="crayon" style="--delay:0s;--x:8%">🖍️</span>
+        <span class="crayon" style="--delay:0.7s;--x:22%">✏️</span>
+        <span class="crayon" style="--delay:1.4s;--x:38%">🎨</span>
+        <span class="crayon" style="--delay:2.1s;--x:62%">🖌️</span>
+        <span class="crayon" style="--delay:0.3s;--x:78%">🖍️</span>
+        <span class="crayon" style="--delay:1.8s;--x:92%">✏️</span>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">✨ Student-Led &nbsp;•&nbsp; Folsom, CA</div>
+        <h1 class="hero-title">
+          <span class="gradient-text">Crayons</span><br />For Change
+        </h1>
+        <p class="hero-subtitle">
+          High school students from Folsom, California — using the power of art
+          and creativity to spark real change in our community and beyond.
+        </p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn btn-primary">Our Story</a>
+          <a href="#mission" class="btn btn-outline">What We Do</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll Down</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about reveal">
+      <div class="section-container">
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">Who We Are</h2>
+        <div class="about-grid">
+          <div class="about-card glass-card">
+            <div class="about-icon">🏫</div>
+            <h3>High School Students</h3>
+            <p>
+              We're passionate high schoolers from Folsom, California, proving
+              that young people can lead powerful change. Our age is our
+              strength — youth-driven energy and fresh ideas fuel everything
+              we do.
+            </p>
+          </div>
+          <div class="about-card glass-card">
+            <div class="about-icon">📍</div>
+            <h3>Proudly From Folsom, CA</h3>
+            <p>
+              Born and raised in Folsom, California, we draw deep inspiration
+              from our local community. We're not waiting until we're older —
+              we're making an impact right here, right now.
+            </p>
+          </div>
+          <div class="about-card glass-card">
+            <div class="about-icon">🎨</div>
+            <h3>Art as a Vehicle</h3>
+            <p>
+              We believe creativity is one of the most powerful forces for
+              change. Crayons and art supplies aren't just tools — they're
+              bridges that connect children to hope, expression, and healing.
+            </p>
+          </div>
+        </div>
+        <div class="about-statement">
+          <blockquote>
+            "Two high schoolers from Folsom with a box of crayons and a dream
+            to change the world — one drawing at a time."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="mission reveal">
+      <div class="section-container">
+        <div class="section-label">Our Mission</div>
+        <h2 class="section-title">What We Do</h2>
+        <div class="mission-grid">
+          <div class="mission-card reveal-card">
+            <div class="card-number">01</div>
+            <h3>Community Outreach</h3>
+            <p>
+              We connect with schools, shelters, and organizations in Folsom
+              and surrounding areas — spreading creativity and providing art
+              supplies to those who need them most.
+            </p>
+          </div>
+          <div class="mission-card reveal-card">
+            <div class="card-number">02</div>
+            <h3>Art Supply Drives</h3>
+            <p>
+              We organize crayon and art supply donation drives so every child
+              has access to the tools they need to express themselves and
+              explore their imagination.
+            </p>
+          </div>
+          <div class="mission-card reveal-card">
+            <div class="card-number">03</div>
+            <h3>Awareness Campaigns</h3>
+            <p>
+              Through social media and local events, we amplify the message
+              that art is a fundamental tool for childhood development,
+              therapy, and community connection.
+            </p>
+          </div>
+          <div class="mission-card reveal-card">
+            <div class="card-number">04</div>
+            <h3>Youth Empowerment</h3>
+            <p>
+              As high schoolers ourselves, we show that age is no barrier to
+              impact. We inspire other young people in Folsom and beyond to
+              stand up and make a difference.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats reveal">
+      <div class="section-container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Co-Founders</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">HS</div>
+            <div class="stat-label">High Schoolers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">CA</div>
+            <div class="stat-label">Folsom, California</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Possibilities</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team reveal">
+      <div class="section-container">
+        <div class="section-label">Our Founders</div>
+        <h2 class="section-title">Meet the Team</h2>
+        <p class="team-intro">
+          Two high school students from Folsom, California who turned a shared
+          passion for art and community into a movement.
+        </p>
+        <div class="team-grid">
+          <div class="team-card reveal-card">
+            <div
+              class="team-avatar"
+              style="background: linear-gradient(135deg, #f54248, #ff8c94)"
+            >
+              A
+            </div>
+            <div class="team-info">
+              <h3>Avyu</h3>
+              <div class="team-roles">
+                <span class="role-badge president">President</span>
+                <span class="role-badge cofounder">Co-Founder</span>
+              </div>
+              <p>
+                Visionary leader and co-founder of Crayons For Change. A
+                dedicated Folsom high schooler driving the mission forward with
+                creativity, passion, and an unshakeable belief that students
+                can change the world.
+              </p>
+            </div>
+            <div class="card-glow glow-red"></div>
+          </div>
+          <div class="team-card reveal-card">
+            <div
+              class="team-avatar"
+              style="background: linear-gradient(135deg, #6c63ff, #a29bfe)"
+            >
+              M
+            </div>
+            <div class="team-info">
+              <h3>Mohammed</h3>
+              <div class="team-roles">
+                <span class="role-badge vp">Vice President</span>
+                <span class="role-badge cofounder">Co-Founder</span>
+              </div>
+              <p>
+                Strategic co-founder and Vice President who works alongside
+                Avyu to build partnerships, organize donation drives, and
+                amplify Crayons For Change's impact across Folsom and beyond.
+              </p>
+            </div>
+            <div class="card-glow glow-purple"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact reveal">
+      <div class="section-container">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="contact-intro">
+          Want to partner with us, donate art supplies, or just learn more
+          about what two high schoolers from Folsom are building? We'd love to
+          connect.
+        </p>
+        <div class="contact-card glass-card">
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <span>Folsom, California</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🏫</span>
+            <span>High School Students — Folsom, CA</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🖍️</span>
+            <span>Crayons For Change</span>
+          </div>
+          <a href="mailto:contact@crayonsforchange.org" class="btn btn-primary contact-btn">
+            Send Us a Message
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">🖍️ Crayons For Change</div>
+        <p class="footer-tagline">
+          High School Students &nbsp;•&nbsp; Folsom, California &nbsp;•&nbsp;
+          Making Art Matter
+        </p>
+        <div class="footer-divider"></div>
+        <p class="footer-copy">
+          © 2025 Crayons For Change. Founded by Avyu &amp; Mohammed.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Scroll reveal
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll(".reveal, .reveal-card").forEach((el) => observer.observe(el));
+
+      // Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 50);
+      });
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.querySelector(anchor.getAttribute("href"));
+          if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    </script>
+  </body>
 </html>
