@@ -1,4 +1,4 @@
-/* Crayons for Change — shared stylesheet */
+/* Crayons for Change — shared stylesheet (inner pages) */
 
 :root {
   --max-width: 1100px;
@@ -540,6 +540,19 @@ footer .brand-desc { font-size: 14px; margin-top: 8px; line-height: 1.6; }
   gap: 8px;
 }
 
+/* ─── Hamburger toggle ─── */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: 6px 8px;
+  color: var(--navy);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 960px) {
   .grid-3 { grid-template-columns: 1fr 1fr; }
@@ -549,7 +562,31 @@ footer .brand-desc { font-size: 14px; margin-top: 8px; line-height: 1.6; }
 }
 
 @media (max-width: 680px) {
-  .nav-links { display: none; }
+  .nav-toggle { display: flex; align-items: center; justify-content: center; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0;
+    box-shadow: var(--shadow);
+    z-index: 19;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links a {
+    padding: 12px 24px;
+    border-radius: 0;
+    font-size: 15px;
+  }
+
   .grid-3 { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
   .stats-row { flex-direction: column; }
@@ -561,8 +598,77 @@ footer .brand-desc { font-size: 14px; margin-top: 8px; line-height: 1.6; }
   section { padding: 48px 0; }
 }
 
+/* ─── Page load fade-in ─── */
+body { animation: innerPageFade 0.45s ease both; }
+@keyframes innerPageFade { from { opacity: 0; } to { opacity: 1; } }
+
+/* ─── Scroll reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1),
+              transform 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.22s; }
+.reveal-d3 { transition-delay: 0.34s; }
+
+/* ─── Card hover lift ─── */
+.card-hover { transition: box-shadow 0.25s ease, transform 0.25s ease; }
+.card-hover:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); transform: translateY(-4px); }
+
+/* ─── Stat item hover ─── */
+.stat-value { transition: transform 0.3s ease; }
+.stat-item:hover .stat-value { transform: scale(1.06); }
+
+/* ─── Button micro-interactions ─── */
+.btn { transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn-primary:hover { box-shadow: 0 8px 20px rgba(245,124,81,0.35); }
+
+/* ─── Nav link underline animation ─── */
+.nav-links a { position: relative; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 1.5px;
+  background: var(--orange);
+  transition: width 0.25s ease;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after { width: 100%; }
+.nav-links a.active::after { width: 100%; }
+
+/* ─── Hero page fade-in ─── */
+.page-hero h1 {
+  animation: heroTitleIn 0.8s cubic-bezier(0.4,0,0.2,1) 0.1s both;
+}
+.page-hero p {
+  animation: heroTitleIn 0.8s cubic-bezier(0.4,0,0.2,1) 0.25s both;
+}
+@keyframes heroTitleIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Image zoom on hover ─── */
+.content-image { overflow: hidden; }
+.content-image img { transition: transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+.content-image:hover img { transform: scale(1.04); }
+
+/* ─── Feature card hover ─── */
+.feature-card { transition: transform 0.25s ease; }
+.feature-card:hover { transform: translateY(-3px); }
+
+/* ─── CTA banner entrance ─── */
+.cta-banner { transition: transform 0.3s ease; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .btn, .card-hover { transition: none; }
-  .btn:hover, .card-hover:hover { transform: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

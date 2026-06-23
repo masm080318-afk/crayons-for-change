@@ -27,6 +27,9 @@
           <a href="get-involved.html">Get Involved</a>
           <a href="contact.html">Contact</a>
         </div>
+        <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="2" y1="5" x2="18" y2="5"/><line x1="2" y1="10" x2="18" y2="10"/><line x1="2" y1="15" x2="18" y2="15"/></svg>
+        </button>
         <a class="nav-cta" href="get-involved.html">Donate</a>
       </nav>
     </div>
@@ -195,10 +198,26 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Crayons for Change. All rights reserved.</span>
+        <span>&copy; 2026 Crayons for Change. All rights reserved.</span>
         <span>Youth-led · Nonprofit · Education</span>
       </div>
     </div>
   </footer>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('section > .container > *').forEach((el, i) => {
+    el.classList.add('reveal'); if (i > 0) el.classList.add(`reveal-d${Math.min(i,3)}`); obs.observe(el);
+  });
+</script>
 </body>
 </html>
