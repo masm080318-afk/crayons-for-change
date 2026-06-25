@@ -409,13 +409,24 @@ section { padding: 80px 0; }
   overflow: hidden;
   aspect-ratio: 4/3;
   background: var(--cream-alt);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 4px 24px rgba(45,41,38,0.09),
+    10px 10px 0 rgba(232,106,58,0.20);
+  transition: box-shadow 0.35s var(--ease), transform 0.35s var(--ease);
+}
+.content-image:hover {
+  transform: translate(-3px, -3px);
+  box-shadow:
+    0 8px 40px rgba(45,41,38,0.13),
+    13px 13px 0 rgba(232,106,58,0.32);
 }
 .content-image img {
   width: 100%; height: 100%;
   object-fit: cover;
   transition: transform 0.5s var(--ease);
 }
-.content-image:hover img { transform: scale(1.03); }
+.content-image:hover img { transform: scale(1.04); }
 
 /* ── TEAM GRID ───────────────────────────────── */
 .team-grid {
@@ -438,12 +449,22 @@ section { padding: 80px 0; }
   aspect-ratio: 1;
   background: var(--cream);
   overflow: hidden;
+  position: relative;
+}
+.person-card .photo::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--orange);
 }
 .person-card .photo img {
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: top;
+  transition: transform 0.45s var(--ease);
 }
+.person-card:hover .photo img { transform: scale(1.05); }
 .photo-placeholder {
   width: 100%; height: 100%;
   display: flex;
